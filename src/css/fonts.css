@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museosans300.woff') format('woff'),
+    url('../fonts/museosans300.ttf') format('truetype');
+    font-weight: 300;
+    font-style: 300;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museosans500.woff') format('woff'),
+    url('../fonts/museosans500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: 500;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/museosans900.woff') format('woff'),
+    url('../fonts/museosans900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: 900;
+}

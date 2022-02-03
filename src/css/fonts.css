@@ -16,6 +16,14 @@
 
 @font-face {
     font-family: 'Museo Sans';
+    src: url('../fonts/museosans700.woff') format('woff'),
+    url('../fonts/museosans700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: 700;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
     src: url('../fonts/museosans900.woff') format('woff'),
     url('../fonts/museosans900.ttf') format('truetype');
     font-weight: 900;

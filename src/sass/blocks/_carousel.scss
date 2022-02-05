@@ -3,53 +3,46 @@
     &__inner {
         width: 76%;
         margin: 0 auto;
-        img {
-            width: 100%;
-        }
+        img {width: 100%;}
     }
-    .slick-prev {
-        border: none;
-        background-color: #fff;
+    .prev, .next {
         position: absolute;
+        border: none;
+        background-color: transparent;        
+        img {width: 50px;}        
+    }
+    .prev {
+        left: 0px;
         left: -66px;
         top: 50%;
         transform: translateY(-50%);
-        img {
-            height: 50px;
-        }
     }
-    .slick-next {
-        border: none;
-        background-color: #fff;
-        position: absolute;
+    .next {
+        right: 100%;
         right: -66px;
         bottom: 50%;
         transform: translateY(50%);
-        img {
-            height: 50px;
-        }
     }
-    .slick-dots {
+    .tns-nav {
         display: flex;
         justify-content: center;
-        list-style-type: none;
-        li {
-            display: block;
+        button {
             margin: 0 5px;
-            font-size: 0;  
-            button {
-                width: 30px;
-                height: 5px;
-                border-radius: 25%;
-                background-color: $main-color;
-                border: $main-color;
-            }
-            &.slick-active {
-                button {
-                    background-color: $main-dark;
-                    border: $main-dark;
-                }
+            width: 40px;
+            height: 5px;
+            border-radius: 10px;
+            border: $main-color;
+            background-color: $main-color;
+            &.tns-nav-active {
+                border: $main-dark;
+                background-color: $main-dark;
             }
         }
+    }
+}
+
+@media (max-width: 992px) {
+    .prev, .next {
+        display: none;
     }
 }

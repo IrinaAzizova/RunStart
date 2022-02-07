@@ -1,17 +1,29 @@
+@media (max-width: 1200px) {
+	.button {
+		&_catalogue-item {
+			width: 120px;
+			height: 40px;
+		}
+	}
+}
 @media (max-width: 992px) {
 	.button {
 		&_header {
 		width: 150px;
     	height: 30px;
 		}
-	}	
+	}
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
 	.button {
 		&_header {
 			width: 140px;
 			height: 28px;
+		}
+		&_catalogue-item {
+			width: 100px;
+			height: 35px;
 		}
 	}
 }

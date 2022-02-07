@@ -1,9 +1,16 @@
 .carousel {
+    .container {
+        width: 50%;
+    }
     padding: 81px 0;
     &__inner {
         width: 76%;
         margin: 0 auto;
-        img {width: 100%;}
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
     }
     .prev, .next {
         position: absolute;
@@ -41,8 +48,14 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .prev, .next {
         display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel .container {
+        width: 70%;
     }
 }

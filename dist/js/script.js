@@ -46,6 +46,29 @@ $(function() {
 });
 
 
+/********** modal **********/
+
+$('[data-modal=consultation]').on('click', function() {
+    document.body.style.overflow = 'hidden';     //switch off scrolling of the body
+    $('.overlay, #consultation').fadeIn(300);
+});
+$('.modal__close, .overlay').on('click', function() {
+    document.body.style.overflow = '';
+    $('.overlay, #consultation, #order').fadeOut(300);
+});
+
+$('.button_catalogue-item').each(function(i) {
+    $(this).on('click', function() {
+        $('#order .modal__subtitle').text($('.catalogue-item__subtitle').eq(i).text());
+        document.body.style.overflow = 'hidden';     //switch off scrolling of the body
+        $('.overlay, #order').fadeIn(300);
+    });
+});
+
+
+
+
+
 /********** keydown esc **********/
 
 /* document.addEventListener('keydown', (e) => {
@@ -62,3 +85,4 @@ overlay.addEventListener('click', (e) => {
        // Закрываем модальное окно
     }
 }); */
+

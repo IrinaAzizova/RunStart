@@ -11,6 +11,9 @@
 
 @media (max-width: 768px) {
     .benifits {
+        .title {
+            font-size: 25px;
+        }
         &__wrapper {
             flex-direction: column;
             margin-top: 30px;

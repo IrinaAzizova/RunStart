@@ -196,6 +196,9 @@
 
 @media (max-width: 786px) {
     .catalogue {
+        .title {
+            font-size: 25px;
+        }
         &__content {
             margin-top: 30px;
         }

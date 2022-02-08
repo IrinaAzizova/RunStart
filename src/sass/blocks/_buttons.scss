@@ -7,6 +7,9 @@
     text-transform: uppercase;
     color: #FFFFFF;
     border: none;
+    &:hover {
+        transform: scale(1.05);
+    }
     &_header {
         width: 153px;
         height: 32px;

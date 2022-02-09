@@ -14,6 +14,9 @@
 </head>
 
 <body>
+
+    <!---------- Promo section ---------->
+
     <section class="promo">
         <div class="container">
             <header class="header">
@@ -56,6 +59,9 @@
         </div>
     </section>
 
+
+    <!---------- Benefits section ---------->
+
     <section class="benifits">
         <div class="container">
             <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
@@ -94,16 +100,22 @@
         </div>
     </section>
 
+
+    <!---------- Consultation section ---------->
+
     <section class="consultation">
         <div class="container">
             <h2 class="title">
                 Получите бесплатную консультацию<br>по подбору пульсометра
             </h2>
-            <p class="consultation__descr">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</p>
-            <form class="feed-form" action="#">
-                <input type="text" name="name" placeholder="Ваше Имя" required>
-                <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                <input type="email" name="email" placeholder="Ваш e-mail" required>
+            <p class="consultation__descr">
+                Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут
+            </p>
+<!---------- Form ---------->
+            <form class="feed-form" id="consultation-form" action="#">
+                <input type="text" name="name" placeholder="Ваше Имя">
+                <input type="tel" name="phone" placeholder="Ваш телефон">
+                <input type="email" name="email" placeholder="Ваш e-mail">
                 <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
@@ -123,13 +135,16 @@
                 </div>
             </div>
             <button type="button" class="prev">
-                <img src="../icon/carousel_section/left_arrow.svg" alt="left arrow icon">
+                <img src="icon/carousel_section/left_arrow.svg" alt="left arrow icon">
             </button>
             <button type="button" class="next">
-                <img src="../icon/carousel_section/right_arrow.svg" alt="right arrow icon">
+                <img src="icon/carousel_section/right_arrow.svg" alt="right arrow icon">
             </button>
         </div>
     </section>
+
+
+    <!---------- Catalogue section ---------->
 
     <section class="catalogue">
         <div class="container">
@@ -177,7 +192,6 @@
                     <div>
                         <hr>
                         <div class="catalogue-item__footer">
-
                             <div class="catalogue-item__prices">
                                 <div class="catalogue-item__old-price">4 750 руб.</div>
                                 <div class="catalogue-item__price">4 500 руб.</div>
@@ -622,6 +636,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

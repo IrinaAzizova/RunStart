@@ -22,8 +22,7 @@ document.querySelector('.next').addEventListener('click', () => {
 
 /********** tabs **********/
 
-$(function() {
-  
+$(function() {  
     $('ul.catalogue__tabs').on('click', 'li:not(.catalogue__tab_active)', function() {
       $(this)
         .addClass('catalogue__tab_active').siblings().removeClass('catalogue__tab_active')
@@ -52,7 +51,7 @@ $('[data-modal=consultation]').on('click', function() {
     document.body.style.overflow = 'hidden';     //switch off scrolling of the body
     $('.overlay, #consultation').fadeIn(300);
 });
-$('.modal__close, .overlay').on('click', function() {
+$('.modal__close').on('click', function() {
     document.body.style.overflow = '';
     $('.overlay, #consultation, #order').fadeOut(300);
 });
@@ -64,25 +63,63 @@ $('.button_catalogue-item').each(function(i) {
         $('.overlay, #order').fadeIn(300);
     });
 });
-
-
-
-
-
 /********** keydown esc **********/
-
-/* document.addEventListener('keydown', (e) => {
-    if (e.code === "Escape") { // К условию можно добавить что окно уже открыто, проверить style.display
-      console.log('1'); // Действие по закрытию окна
+const overlay = document.querySelector('.overlay');
+document.addEventListener('keydown', function(event) {
+    if (event.code == 'Escape' && overlay.style.display == 'block') {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
     }
-}); */
+});
 
-/********** tap overlay  ********/
+/********** validate *********/
 
-/* const overlay = document.querySelector('.overlay');
-overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-       // Закрываем модальное окно
+function validaForms(form) {
+    $(form).validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            phone: 'required',
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Пожалуйста, введите ваше имя",
+                minlength: `Введите не менее ${2} символов`
+            },
+            phone: 'Пожалуйста, введите ваш телефон',
+            email: {
+                required: "Пожалуйста, введите ваш email",
+                email: "Неправильно указан адрес почты"
+            }
+        }
+    });
+}
+validaForms('#consultation-form');
+validaForms('#consultation form');
+validaForms('#order form');
+
+$('input[name=phone]').mask("+7 (999) 999-9999");
+
+
+$('form').submit(function(e) {
+    e.preventDefault();
+    if (!$(this).valid()) {
+        return;
     }
-}); */
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
 
+        $('form').trigger('reset');
+    });
+    return false;
+});

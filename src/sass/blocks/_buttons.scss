@@ -9,6 +9,7 @@
     border: none;
     &:hover {
         transform: scale(1.05);
+        outline: none;
     }
     &_header {
         width: 153px;

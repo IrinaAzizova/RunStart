@@ -48,21 +48,26 @@ $(function() {
 /********** modal **********/
 
 $('[data-modal=consultation]').on('click', function() {
+    $('#thanks').fadeOut(0);
     document.body.style.overflow = 'hidden';     //switch off scrolling of the body
+    
     $('.overlay, #consultation').fadeIn(300);
 });
 $('.modal__close').on('click', function() {
+    $('#thanks').fadeOut(0);
     document.body.style.overflow = '';
     $('.overlay, #consultation, #order').fadeOut(300);
 });
 
 $('.button_catalogue-item').each(function(i) {
     $(this).on('click', function() {
+        $('#thanks').fadeOut(0);
         $('#order .modal__subtitle').text($('.catalogue-item__subtitle').eq(i).text());
         document.body.style.overflow = 'hidden';     //switch off scrolling of the body
         $('.overlay, #order').fadeIn(300);
     });
 });
+
 /********** keydown esc **********/
 const overlay = document.querySelector('.overlay');
 document.addEventListener('keydown', function(event) {
@@ -118,7 +123,8 @@ $('form').submit(function(e) {
         data: $(this).serialize()
     }).done(function() {
         $(this).find("input").val("");
-
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn(300);
         $('form').trigger('reset');
     });
     return false;

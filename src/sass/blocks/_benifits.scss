@@ -19,7 +19,18 @@
         img {
             display: block;
             margin: 0 auto;
-            max-width: 70px
+            max-width: 70px;
+            &.benifits__img_animated {
+                /* animation-name: heartbeat;
+                animation-duration: 1.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-direction: alternate; */
+                animation: heartbeat 1.5s ease infinite alternate;
+                &:hover {
+                    animation-play-state: paused;
+                }     
+            }
         }
         h3 {
             margin-top: 35px;

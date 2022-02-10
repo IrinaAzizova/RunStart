@@ -1,3 +1,6 @@
+@import "variables";
+@import "animations";
+
 * {
 	font-family: 'Museo Sans', sans-serif;
 }
@@ -13,7 +16,8 @@
 	}
 }
 
-@import "variables";
+
+
 @import "blocks/promo";
 @import "blocks/header";
 @import "blocks/buttons";
@@ -26,6 +30,7 @@
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/pageup";
+
 
 @import "media/media-header";
 @import "media/media-promo";

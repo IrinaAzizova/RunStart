@@ -53,6 +53,15 @@
             transform: scale(1.05);
         }
     }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 630px;
+        border: 0; 
+    }
+    
 }
 
 @media (max-width: 1200px) {

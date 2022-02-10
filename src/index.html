@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="css/fonts.css">
     <!-- <link rel="stylesheet" href="css/slick.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
-    <!---------- Promo section ---------->
+    <!-- __________Promo section__________ -->
 
     <section id="up" class="promo">
         <div class="container">
@@ -60,7 +61,7 @@
     </section>
 
 
-    <!---------- Benefits section ---------->
+    <!-- __________Benefits section__________ -->
 
     <section class="benifits">
         <div class="container">
@@ -101,7 +102,7 @@
     </section>
 
 
-    <!---------- Consultation section ---------->
+    <!-- __________Consultation section__________ -->
 
     <section class="consultation">
         <div class="container">
@@ -111,7 +112,7 @@
             <p class="consultation__descr">
                 Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут
             </p>
-<!---------- Form ---------->
+<!-- __________Form__________ -->
             <form class="feed-form" id="consultation-form" action="#">
                 <input type="text" name="name" placeholder="Ваше Имя">
                 <input type="tel" name="phone" placeholder="Ваш телефон">
@@ -121,7 +122,7 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -141,10 +142,10 @@
                 <img src="icon/carousel_section/right_arrow.svg" alt="right arrow icon">
             </button>
         </div>
-    </section>
+    </div>
 
 
-    <!---------- Catalogue section ---------->
+    <!-- __________Catalogue section__________ -->
 
     <section class="catalogue">
         <div class="container">
@@ -515,7 +516,7 @@
     <section class="review">
         <div class="container">
             <h2 class="review__title">отзывы клиентов</h2>
-            <div class="review-item">
+            <div class="review-item animate__animated animate__fadeInUp wow" data-wow-duration ="1.5s" data-wow-delay ="0.5s">
                 <img src="img/review_section/photo_1.jpg" alt="photo of user" class="review-item__img">
                 <div class="review-item__descr">
                     <div class="review-item__name">Ирина Иванченко </div>
@@ -533,7 +534,7 @@
                     </p>
                 </div>
             </div>
-            <div class="review-item">
+            <div class="review-item animate__animated animate__fadeInUp wow" data-wow-duration ="1.5s" data-wow-delay ="0.51s">
                 <img src="img/review_section/photo_2.jpg" alt="photo of user" class="review-item__img">
                 <div class="review-item__descr">
                     <div class="review-item__name">Иван Сёмочкин</div>
@@ -549,7 +550,7 @@
                     </p>
                 </div>
             </div>
-            <div class="review-item">
+            <div class="review-item animate__animated animate__fadeInUp wow" data-wow-duration ="1.5s" data-wow-delay ="0.52s">
                 <img src="img/review_section/photo_3.jpg" alt="photo of user" class="review-item__img">
                 <div class="review-item__descr">
                     <div class="review-item__name">Юлия Дашкина</div>
@@ -572,10 +573,7 @@
     </section>
 
     <footer class="footer">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2212.66575349572!2d44.01901584510241!3d56.31834162313167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d456d7464d01%3A0x6ec2c31f68a0525a!2z0YPQuy4g0JHQtdC70LjQvdGB0LrQvtCz0L4sIDYzLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0J3QuNC20LXQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgNjAzMDA2!5e0!3m2!1sru!2sru!4v1644312414653!5m2!1sru!2sru"
-            width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2212.66575349572!2d44.01901584510241!3d56.31834162313167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d456d7464d01%3A0x6ec2c31f68a0525a!2z0YPQuy4g0JHQtdC70LjQvdGB0LrQvtCz0L4sIDYzLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0J3QuNC20LXQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgNjAzMDA2!5e0!3m2!1sru!2sru!4v1644312414653!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
         <div class="footer__info">
             <address class="footer__addr">
                 Белинского, 63. ТЦ "Этажи"
@@ -640,6 +638,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -1,5 +1,6 @@
 @font-face {
     font-family: 'Museo Sans';
+    font-display: swap;
     src: url('../fonts/museosans300.woff') format('woff'),
     url('../fonts/museosans300.ttf') format('truetype');
     font-weight: 300;
@@ -8,6 +9,7 @@
 
 @font-face {
     font-family: 'Museo Sans';
+    font-display: swap;
     src: url('../fonts/museosans500.woff') format('woff'),
     url('../fonts/museosans500.ttf') format('truetype');
     font-weight: 500;
@@ -16,6 +18,7 @@
 
 @font-face {
     font-family: 'Museo Sans';
+    font-display: swap;
     src: url('../fonts/museosans700.woff') format('woff'),
     url('../fonts/museosans700.ttf') format('truetype');
     font-weight: 700;
